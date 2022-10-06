@@ -11,7 +11,6 @@ import { useMode } from "../hooks/useMode";
 import { getDayString, useTodays } from "../hooks/useTodays";
 import { Twemoji } from "@teuteuf/react-emoji-render";
 import { suburbs } from "../domain/suburbs.position";
-import { useNewsNotifications } from "../hooks/useNewsNotifications";
 import { event } from "../domain/analytics";
 import { bestGuessPercent, dayCount } from "../domain/guessStats";
 
@@ -29,8 +28,6 @@ export function Game({ settingsData, updateSettings }: GameProps) {
     () => getDayString(settingsData.shiftDayCount),
     [settingsData.shiftDayCount]
   );
-
-  useNewsNotifications(dayString);
 
   const suburbInputRef = useRef<HTMLInputElement>(null);
 
