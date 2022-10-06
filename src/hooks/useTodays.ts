@@ -1,13 +1,7 @@
 import { DateTime } from "luxon";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import seedrandom from "seedrandom";
-import {
-  bigEnoughSuburbsWithImage,
-  suburbsWithImage,
-  Suburb,
-  smallSuburbLimit,
-} from "../domain/suburbs";
-import { areas } from "../domain/suburbs.area";
+import { suburbsWithImage, Suburb } from "../domain/suburbs";
 import { SuburbCode } from "../domain/suburbs.position";
 import { Guess, loadAllGuesses, saveGuesses } from "../domain/guess";
 
@@ -73,14 +67,11 @@ export function useTodays(dayString: string): [
 function getSuburb(dayString: string) {
   const currentDayDate = DateTime.fromFormat(dayString, "yyyy-MM-dd");
   let pickingDate = DateTime.fromFormat("2022-03-21", "yyyy-MM-dd");
-  let smallSuburbCooldown = 0;
   let pickedSuburb: Suburb | null = null;
 
   const lastPickDates: Record<string, DateTime> = {};
 
   do {
-    smallSuburbCooldown--;
-
     const pickingDateString = pickingDate.toFormat("yyyy-MM-dd");
 
     const forcedSuburbCode = forcedSuburbs[dayString];
@@ -89,8 +80,7 @@ function getSuburb(dayString: string) {
         ? suburbsWithImage.find((suburb) => suburb.code === forcedSuburbCode)
         : undefined;
 
-    const suburbSelection =
-      smallSuburbCooldown < 0 ? suburbsWithImage : bigEnoughSuburbsWithImage;
+    const suburbSelection = suburbsWithImage;
 
     if (forcedSuburb != null) {
       pickedSuburb = forcedSuburb;
@@ -106,10 +96,6 @@ function getSuburb(dayString: string) {
           pickedSuburb = suburbSelection[suburbIndex];
         }
       }
-    }
-
-    if (areas[pickedSuburb.code] < smallSuburbLimit) {
-      smallSuburbCooldown = 7;
     }
 
     lastPickDates[pickedSuburb.code] = pickingDate;
