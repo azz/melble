@@ -60,9 +60,6 @@ export const translations = {
       or: "or",
       ignore: "Ignore",
       buyMeACoffee: "Buy me a ☕!",
-      news: {
-        newsNotifications: "News notifications system added!",
-      },
     },
   },
   fr: {
@@ -124,7 +121,6 @@ export const translations = {
       or: "ou",
       ignore: "Ignorer",
       buyMeACoffee: "Offrez moi un ☕ !",
-      news: {},
     },
   },
   es: {
@@ -357,9 +353,6 @@ export const translations = {
       or: "albo",
       ignore: "Pomiń",
       buyMeACoffee: "Postaw mi ☕!",
-      news: {
-        newsNotifications: "Dodano system powiadomień o nowościach!",
-      },
     },
   },
   pt: {
@@ -420,9 +413,6 @@ export const translations = {
       or: "ou",
       ignore: "Ignorar",
       buyMeACoffee: "Pague-me um ☕!",
-      news: {
-        newsNotifications: "Adicionado sistema de novidades!",
-      },
     },
   },
   de: {
@@ -483,9 +473,6 @@ export const translations = {
       or: "oder",
       ignore: "Ignorieren",
       buyMeACoffee: "Kauf mir einen ☕!",
-      news: {
-        newsNotifications: "Neuigkeiten Benachrichtigungssytem hinzugefügt!",
-      },
     },
   },
   ja: {
@@ -545,9 +532,6 @@ export const translations = {
       or: "または",
       ignore: "スキップ",
       buyMeACoffee: "☕ コーヒー1杯分をサポート！",
-      news: {
-        newsNotifications: "ニュース通知が実装されました！",
-      },
     },
   },
   co: {
@@ -611,9 +595,6 @@ export const translations = {
       or: "o",
       ignore: "Ignurà",
       buyMeACoffee: "Rigalatemi d’un ☕ !",
-      news: {
-        newsNotifications: "Aghjuntu di u sistema di nutificazione !",
-      },
     },
   },
 };
