@@ -266,7 +266,7 @@ export function Game({ settingsData, updateSettings }: GameProps) {
                 type="submit"
               >
                 <Twemoji
-                  text="🌏"
+                  text="🇦🇺"
                   options={{ className: "inline-block" }}
                   className="flex items-center justify-center"
                 />{" "}
