@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import { SettingsData } from "../hooks/useSettings";
 import { useMode } from "../hooks/useMode";
 import { getDayString, useTodays } from "../hooks/useTodays";
-import { Twemoji } from "@teuteuf/react-emoji-render";
+import Twemoji from "./Twemoji";
 import { suburbs } from "../domain/suburbs.position";
 import { event } from "../domain/analytics";
 import { bestGuessPercent, dayCount } from "../domain/guessStats";

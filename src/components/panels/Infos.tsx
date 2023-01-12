@@ -4,7 +4,7 @@ import React from "react";
 import { Melble } from "../Melble";
 import { formatDistance } from "../../domain/geography";
 import { SettingsData } from "../../hooks/useSettings";
-import { Twemoji } from "@teuteuf/react-emoji-render";
+import Twemoji from "./../Twemoji";
 
 interface InfosProps {
   isOpen: boolean;

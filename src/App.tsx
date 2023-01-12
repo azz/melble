@@ -6,7 +6,7 @@ import { Infos } from "./components/panels/Infos";
 import { Settings } from "./components/panels/Settings";
 import { useSettings } from "./hooks/useSettings";
 import { Stats } from "./components/panels/Stats";
-import { Twemoji } from "@teuteuf/react-emoji-render";
+import Twemoji from "./components/Twemoji";
 
 export default function App() {
   const [infoOpen, setInfoOpen] = useState(false);
