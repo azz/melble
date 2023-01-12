@@ -8,7 +8,7 @@ export default function Twemoji({
 }: {
   text: string;
   className?: string;
-  options?: any;
+  options?: Record<string, string>;
 }) {
   return (
     <TwemojiSource
